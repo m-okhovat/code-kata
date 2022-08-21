@@ -10,11 +10,10 @@ public class Fraction {
     }
 
     public Fraction plus(Fraction that) {
-        return this;
+        return new Fraction(this.number + that.number);
     }
 
     public int toIntValue() {
-        if (number == 1) return 1;
-        return 0;
+        return number;
     }
 }

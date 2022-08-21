@@ -19,4 +19,12 @@ public class AddFractionTests {
 
         Assertions.assertEquals(1, sum.toIntValue());
     }
+
+    @Test
+    void positive_plus_positive() {
+
+        Fraction sum = new Fraction(3).plus(new Fraction(2));
+
+        Assertions.assertEquals(5, sum.toIntValue());
+    }
 }
