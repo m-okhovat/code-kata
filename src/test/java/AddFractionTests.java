@@ -15,5 +15,8 @@ public class AddFractionTests {
     @Test
     void positive_plus_zero() {
 
+        Fraction sum = new Fraction(1).plus(new Fraction(0));
+
+        Assertions.assertEquals(1, sum.toIntValue());
     }
 }
