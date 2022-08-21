@@ -2,7 +2,7 @@ package org.example.main;
 
 public class Fraction {
 
-    private int number;
+    private final int number;
 
     public Fraction(int number) {
 
@@ -10,7 +10,7 @@ public class Fraction {
     }
 
     public Fraction plus(Fraction that) {
-        return new Fraction(this.number + that.number);
+          return new Fraction(this.number + that.number);
     }
 
     public int toIntValue() {

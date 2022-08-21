@@ -21,6 +21,13 @@ public class AddFractionTests {
     }
 
     @Test
+    public void zero_plus_positive(){
+
+        var sum = new Fraction(0).plus(new Fraction(3));
+
+        Assertions.assertEquals(3, sum.toIntValue());
+    }
+    @Test
     void positive_plus_positive() {
 
         Fraction sum = new Fraction(3).plus(new Fraction(2));
