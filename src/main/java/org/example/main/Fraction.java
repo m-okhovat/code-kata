@@ -3,32 +3,35 @@ package org.example.main;
 public class Fraction {
 
     private final int number;
-//    private  boolean hasAnotherNumber;
+    private final int denominator;
+
     public Fraction(int number) {
 
         this.number = number;
+        this.denominator = 1;
     }
 
-    public Fraction(int number, int anotherNumber){
+    public Fraction(int number, int denominator) {
         this.number = number;
-//        this.hasAnotherNumber  = true;
+        this.denominator = denominator;
 
     }
 
     public Fraction plus(Fraction that) {
-//          if (hasAnotherNumber) return new Fraction(5,5);
-        return new Fraction(this.number + that.number, 5);
+        return new Fraction(this.number + that.number, denominator);
     }
 
     public int toIntValue() {
         return number;
     }
 
-    public int getDemominator() {
-        return 5;
+    public int getDenominator() {
+
+        return denominator;
     }
 
-    public int getNuminator() {
-        return 5;
+    public int getNumerator() {
+
+        return number;
     }
 }

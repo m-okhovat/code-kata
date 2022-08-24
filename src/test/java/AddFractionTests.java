@@ -36,14 +36,14 @@ public class AddFractionTests {
     }
 
     @Test
-    void nonTrivial_positive_plus_to_nonTrivial_positive() {
+    void nonTrivial_positive_plus_to_nonTrivial_positive_common_denominator() {
 
 
-        var sum = new Fraction(3, 5)
+        var sum = new Fraction(1, 5)
                 .plus(new Fraction(2, 5));
 
-        assertEquals(5, sum.getDemominator());
-        assertEquals(5, sum.getNuminator());
+        assertEquals(5, sum.getDenominator());
+        assertEquals(3, sum.getNumerator());
     }
 
 
