@@ -2,27 +2,33 @@ package org.example.main;
 
 public class Fraction {
 
-    private final int number;
+    private final int numerator;
     private final int denominator;
 
     public Fraction(int number) {
 
-        this.number = number;
+        this.numerator = number;
         this.denominator = 1;
     }
 
     public Fraction(int number, int denominator) {
-        this.number = number;
+        this.numerator = number;
         this.denominator = denominator;
 
     }
 
     public Fraction plus(Fraction that) {
-        return new Fraction(this.number + that.number, denominator);
+        if (this.denominator!=that.denominator){
+         return new Fraction(this.numerator* that.denominator + that.numerator*this.denominator,
+                 this.denominator* that.denominator);
+        }
+        else {
+            return new Fraction(this.numerator + that.numerator, denominator);
+        }
     }
 
     public int toIntValue() {
-        return number;
+        return numerator;
     }
 
     public int getDenominator() {
@@ -32,6 +38,20 @@ public class Fraction {
 
     public int getNumerator() {
 
-        return number;
+        return numerator;
     }
+
+    @Override
+    public boolean equals(Object other) {
+        if (other == null) return false;
+
+        if (other instanceof  Fraction) {
+
+            var that = (Fraction)other;
+            return (that.denominator == this.denominator && that.numerator == this.numerator);
+        }
+        return false;
+    }
+
+
 }

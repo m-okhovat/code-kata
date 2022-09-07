@@ -42,3 +42,4 @@ public class FactorialTests {
         Assertions.assertEquals(BigInteger.valueOf(720), result);
     }
 }
+
