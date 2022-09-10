@@ -11,9 +11,10 @@ public class Fraction {
         this.denominator = 1;
     }
 
-    public Fraction(int number, int denominator) {
-        this.numerator = number;
-        this.denominator = denominator;
+    public Fraction(int numerator, int denominator) {
+        int gcd = MathTools.gcd(numerator, denominator);
+        this.numerator = numerator/gcd;
+        this.denominator = denominator/gcd;
 
     }
 

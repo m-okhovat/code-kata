@@ -32,7 +32,12 @@ public class AddFractionTests {
 
         Fraction sum = new Fraction(3, 5).plus(new Fraction(2, 5));
 
-        Assertions.assertEquals(5, sum.toIntValue());
+        Assertions.assertEquals(1, sum.toIntValue());
+    }
+
+    @Test
+    void reduce_Two_whole_numbers() {
+        assertEquals(new Fraction(2), new Fraction(12, 6));
     }
 
     @Test
