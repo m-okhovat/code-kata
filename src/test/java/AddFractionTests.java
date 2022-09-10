@@ -38,7 +38,6 @@ public class AddFractionTests {
         Assertions.assertEquals(1, sum.toIntValue());
     }
 
-
     @Test
     void nonTrivial_positive_plus_to_nonTrivial_positive_common_denominator() {
 

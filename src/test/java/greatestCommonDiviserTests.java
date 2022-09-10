@@ -23,8 +23,6 @@ public class greatestCommonDiviserTests {
     void primeNumbers() {
         Assertions.assertEquals(1, MathTools.gcd(7,11));
     }
-
-
 }
 
 
