@@ -1,7 +1,14 @@
 package org.example.main;
 
 public class Sale {
-    public void onBarcode(String barcode) {
 
+    private final Display display;
+
+    public Sale(Display display) {
+        this.display = display;
+    }
+
+    public void onBarcode(String barcode) {
+        display.setText("$343");
     }
 }
