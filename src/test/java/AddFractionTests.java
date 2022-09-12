@@ -49,5 +49,16 @@ public class AddFractionTests {
         assertEquals(3, sum.getNumerator());
     }
 
+    @Test
+    void common_factors_in_denominators() {
+        assertEquals(new Fraction(11, 8), new Fraction(3,4)
+                .plus(new Fraction(5,8)));
+    }
+
+    @Test
+    void adding_two_negative_numbers() {
+        assertEquals(new Fraction(1,2),
+                new Fraction(-1, 4).plus(new Fraction(-3, -4)));
+    }
 }
 
