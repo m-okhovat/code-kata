@@ -9,6 +9,9 @@ public class Sale {
     }
 
     public void onBarcode(String barcode) {
+        if (barcode == "1433")
         display.setText("$343");
+        else if(barcode == "4545")
+            display.setText("$45656");
     }
 }

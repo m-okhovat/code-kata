@@ -18,7 +18,6 @@ public class SellOneItemTests {
     }
 
 
-    @Disabled("refactoring ...")
     @Test
     void sell_another_item() {
 
