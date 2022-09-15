@@ -13,5 +13,7 @@ public class Sale {
         display.setText("$343");
         else if(barcode == "4545")
             display.setText("$45656");
+        else
+            display.setText("product not found.");
     }
 }

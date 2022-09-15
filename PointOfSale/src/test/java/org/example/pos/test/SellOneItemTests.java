@@ -28,4 +28,14 @@ public class SellOneItemTests {
 
         Assertions.assertEquals("$45656", display.getText());
     }
+
+    @Test
+    void product_not_found() {
+        var display = new Display();
+        var sale = new Sale(display);
+
+        sale.onBarcode("989");
+
+Assertions.assertEquals("product not found.", display.getText());
+    }
 }
