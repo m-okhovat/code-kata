@@ -38,4 +38,14 @@ public class SellOneItemTests {
 
 Assertions.assertEquals("product not found.", display.getText());
     }
+
+    @Test
+    void empty_barcode() {
+        var display = new Display();
+        var sale = new Sale(display);
+
+        sale.onBarcode("");
+
+        Assertions.assertEquals("error: invalid barcode!", display.getText());
+    }
 }
